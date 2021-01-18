@@ -1,1 +1,1 @@
-**Talk-t
+**Talk-to-ChatGP
