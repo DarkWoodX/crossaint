@@ -1,1 +1,1 @@
-**Talk-to-ChatGPT** is a Google Chrome extension that allo
+**Talk-to-ChatGPT** is a Google Chrome extension that allows users to t
