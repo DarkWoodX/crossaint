@@ -1,1 +1,1 @@
-**Talk-to-ChatGPT** is a Googl
+**Talk-to-ChatGPT** is a Google Chrome 
