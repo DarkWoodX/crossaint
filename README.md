@@ -1,1 +1,1 @@
-**Talk-to-ChatGPT** is a Google Chrome 
+**Talk-to-ChatGPT** is a Google Chrome extension
