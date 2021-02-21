@@ -1,1 +1,1 @@
-**Talk-to-ChatGPT** is a Google Chrome extension that allows users to talk with the ChatGPT AI using their voice (speech recognition), an
+**Talk-to-ChatGPT** is a Google Chrome extension that allows users to talk with the ChatGPT AI using their voice (speech recognition), and liste
