@@ -2,4 +2,4 @@
 
 **The Talk-to-ChatGPT Google Chrome extension can be downloaded from the Chrome Web store here:** https://chrome.google.com/webstore/detail/talk-to-chatgpt/hodadfhfagpiemkeoliaelelfbboamlk
 
-After installing the Google Chrome extension, open or reload the ChatGPT page (
+After installing the Google Chrome extension, open or reload the ChatGPT page ( https
