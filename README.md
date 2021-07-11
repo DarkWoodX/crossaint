@@ -6,4 +6,4 @@ After installing the Google Chrome extension, open or reload the ChatGPT page ( 
 
 ![Talk-to-GPT Menu](/images/menu.png?raw=true "Talk-to-GPT Menu")
 
-Once started, Talk-to-ChatGPT displays a menu o
+Once started, Talk-to-ChatGPT displays a menu on the top r
