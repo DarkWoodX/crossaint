@@ -8,4 +8,4 @@ After installing the Google Chrome extension, open or reload the ChatGPT page ( 
 
 Once started, Talk-to-ChatGPT displays a menu on the top right corner of the page where users can access settings (such as voice, language, and more), skip the current message, toggle voice recognition on or off, and toggle text-to-speech on or off.
 
-The settings menu can be seen bel
+The settings menu can be seen below. Setti
