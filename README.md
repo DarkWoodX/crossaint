@@ -10,4 +10,4 @@ Once started, Talk-to-ChatGPT displays a menu on the top right corner of the pag
 
 The settings menu can be seen below. Settings are saved in a cookie and reloaded automatically each time you activate the script.
 
-![Setting
+![Settings dialog]
