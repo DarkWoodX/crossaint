@@ -12,4 +12,4 @@ The settings menu can be seen below. Settings are saved in a cookie and reloaded
 
 ![Settings dialog](/images/settings.png?raw=true "Settings dialog")
 
-Demo (English+Frenc
+Demo (English+French) v1.6: h
