@@ -18,4 +18,5 @@ Demo (English+French) v1.6: https://www.youtube.com/watch?v=VXkLQMEs3lA
 
 **Q: Can you make it speak faster or in a different voice or language?** A: Yes, use the settings menu. You can select a variety of settings among which the speech rate, voice type, and language.
 
-**Q: What is the purpose of this proje
+**Q: What is the purpose of this project?**
+A: Fun, and
