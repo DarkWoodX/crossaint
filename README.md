@@ -22,4 +22,4 @@ Demo (English+French) v1.6: https://www.youtube.com/watch?v=VXkLQMEs3lA
 A: Fun, and nothing else. This AI is mind-bogglingly intelligent and I had a deep desire to converse with it orally, to make it more interesting. It's merely a proof of concept. Surely OpenAI themselves will make a proper version of this in the future, at which point my project will be completely useless.
 
 **Q: Is it safe to use?**
-A: It's simple javascript code that will e
+A: It's simple javascript code that will execute only in
