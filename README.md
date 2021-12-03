@@ -25,4 +25,4 @@ A: Fun, and nothing else. This AI is mind-bogglingly intelligent and I had a dee
 A: It's simple javascript code that will execute only in the context of the ChatGPT webpage. As soon as you navigate away, everything is cleared. The javascript code is open source, so feel free to check out what it does.
 
 **Q: Will it always work?**
-A
+A: it might 
