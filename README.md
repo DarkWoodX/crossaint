@@ -30,4 +30,4 @@ A: it might not work indefinitely, and here's why. The code is based on the curr
 **Q: I have an error or a problem...**
 A: Feel free to update the javascript yourself and propose changes on Github, or simply report the issue if you aren't a programmer.
 
-**Q: Can I mak
+**Q: Can I make changes 
