@@ -31,4 +31,4 @@ A: it might not work indefinitely, and here's why. The code is based on the curr
 A: Feel free to update the javascript yourself and propose changes on Github, or simply report the issue if you aren't a programmer.
 
 **Q: Can I make changes to your code?**
-A: Yes, feel free to make changes, and 
+A: Yes, feel free to make changes, and do whatever you wa
