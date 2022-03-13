@@ -33,4 +33,4 @@ A: Feel free to update the javascript yourself and propose changes on Github, or
 **Q: Can I make changes to your code?**
 A: Yes, feel free to make changes, and do whatever you want, commit, fork, just have fun.
 
-**Q: How do I k
+**Q: How do I know what lan
