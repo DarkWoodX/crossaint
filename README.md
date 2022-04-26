@@ -34,4 +34,4 @@ A: Feel free to update the javascript yourself and propose changes on Github, or
 A: Yes, feel free to make changes, and do whatever you want, commit, fork, just have fun.
 
 **Q: How do I know what languages are supported?**
-A: this is entirely based on the Google Chrome
+A: this is entirely based on the Google Chrome APIs, so you 
