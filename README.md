@@ -34,4 +34,4 @@ A: Feel free to update the javascript yourself and propose changes on Github, or
 A: Yes, feel free to make changes, and do whatever you want, commit, fork, just have fun.
 
 **Q: How do I know what languages are supported?**
-A: this is entirely based on the Google Chrome APIs, so you need to ask Google, I cannot provide an up-to-date answer. I've only tested it with English and French. The lan
+A: this is entirely based on the Google Chrome APIs, so you need to ask Google, I cannot provide an up-to-date answer. I've only tested it with English and French. The languages in th
