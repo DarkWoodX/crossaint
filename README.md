@@ -36,4 +36,6 @@ A: Yes, feel free to make changes, and do whatever you want, commit, fork, just 
 **Q: How do I know what languages are supported?**
 A: this is entirely based on the Google Chrome APIs, so you need to ask Google, I cannot provide an up-to-date answer. I've only tested it with English and French. The languages in the settings menu are the same ones found on the Google demos.
 
-# Press cover
+# Press coverage
+
+Talk
