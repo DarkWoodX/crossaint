@@ -38,4 +38,4 @@ A: this is entirely based on the Google Chrome APIs, so you need to ask Google, 
 
 # Press coverage
 
-Talk
+Talk-to-ChatG
