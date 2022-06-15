@@ -38,4 +38,4 @@ A: this is entirely based on the Google Chrome APIs, so you need to ask Google, 
 
 # Press coverage
 
-Talk-to-ChatGPT has been receiving press
+Talk-to-ChatGPT has been receiving press cove
