@@ -41,4 +41,4 @@ A: this is entirely based on the Google Chrome APIs, so you need to ask Google, 
 Talk-to-ChatGPT has been receiving press coverage since its release. It is currently featured on the following sites:
 
 * JustGeek - https://www.justgeek.fr/talk-to-chatgpt-discuter-a-voix-haute-avec-chatgpt-103657/
-* Comment Ca Marche - 
+* Comment Ca Marche - https:
