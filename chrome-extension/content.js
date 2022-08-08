@@ -11,3 +11,8 @@
 // ----------------------------
 // SETTINGS (FEEL FREE TO EDIT)
 // ----------------------------
+// These are the default settings. Since v1.3, a 'settings' menu allows to change most of the below values in the UI
+// Since v1.4, these settings are saved. So there is no need to edit them out anymore.
+
+// Settings for the text-to-speech functionality (the bot's voice)
+var CN_TEXT_TO_SPEECH_RATE = 1; // The higher the rate, the faster the bot will speak
