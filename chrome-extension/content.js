@@ -30,3 +30,15 @@ var CN_SAY_THIS_WORD_TO_PAUSE = "pause";
 
 // Determine whether messages are sent immediately after speaing
 var CN_AUTO_SEND_AFTER_SPEAKING = true;
+
+// Determine which word(s) will cause this script to send the current message (if auto-send disabled)
+var CN_SAY_THIS_TO_SEND = "send message now"; 
+
+// Indicate "locale-voice name" (the possible values are difficult to determine, you should just ignore this and use the settings menu instead)
+var CN_WANTED_VOICE_NAME = "";
+
+// ----------------------------
+
+
+// -------------------
+// CODE (DO NOT ALTER)
