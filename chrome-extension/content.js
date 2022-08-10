@@ -50,3 +50,17 @@ var CN_CURRENT_MESSAGE_SENTENCES_NEXT_READ = 0;
 var CN_SPEECHREC = null;
 var CN_IS_READING = false;
 var CN_IS_LISTENING = false;
+var CN_FINISHED = false;
+var CN_PAUSED = false;
+var CN_WANTED_VOICE = null;
+var CN_TIMEOUT_KEEP_SYNTHESIS_WORKING = null;
+var CN_TIMEOUT_KEEP_SPEECHREC_WORKING = null;
+var CN_SPEECH_REC_SUPPORTED = false;
+var CN_SPEAKING_DISABLED = false;
+var CN_SPEECHREC_DISABLED = false;
+
+// This function will say the given text out loud using the browser's speech synthesis API
+function CN_SayOutLoud(text) {
+	if (!text || CN_SPEAKING_DISABLED) {
+		if (CN_SPEECH_REC_SUPPORTED && CN_SPEECHREC && !CN_IS_LISTENING && !CN_PAUSED && !CN_SPEECHREC_DISABLED) CN_SPEECHREC.start();
+		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
