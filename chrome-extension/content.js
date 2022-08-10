@@ -42,3 +42,11 @@ var CN_WANTED_VOICE_NAME = "";
 
 // -------------------
 // CODE (DO NOT ALTER)
+// -------------------
+var CN_MESSAGE_COUNT = 0;
+var CN_CURRENT_MESSAGE = null;
+var CN_CURRENT_MESSAGE_SENTENCES = [];
+var CN_CURRENT_MESSAGE_SENTENCES_NEXT_READ = 0;
+var CN_SPEECHREC = null;
+var CN_IS_READING = false;
+var CN_IS_LISTENING = false;
