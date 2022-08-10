@@ -64,3 +64,11 @@ function CN_SayOutLoud(text) {
 	if (!text || CN_SPEAKING_DISABLED) {
 		if (CN_SPEECH_REC_SUPPORTED && CN_SPEECHREC && !CN_IS_LISTENING && !CN_PAUSED && !CN_SPEECHREC_DISABLED) CN_SPEECHREC.start();
 		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+		CN_TIMEOUT_KEEP_SPEECHREC_WORKING = setTimeout(CN_KeepSpeechRecWorking, 100);
+		return;
+	}
+	
+	// Are we speaking?
+	if (CN_SPEECHREC) {
+		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+		CN_SPEECHREC.stop();
