@@ -72,3 +72,14 @@ function CN_SayOutLoud(text) {
 	if (CN_SPEECHREC) {
 		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
 		CN_SPEECHREC.stop();
+	}
+	
+	// Let's speak out loud
+	console.log("Saying out loud: "+text);
+	var msg = new SpeechSynthesisUtterance();
+	msg.text = text;
+	
+	if (CN_WANTED_VOICE) msg.voice = CN_WANTED_VOICE;
+	msg.rate = CN_TEXT_TO_SPEECH_RATE;
+	msg.pitch = CN_TEXT_TO_SPEECH_PITCH;
+	msg.onstart = () => {
