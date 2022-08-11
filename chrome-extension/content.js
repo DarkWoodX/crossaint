@@ -92,3 +92,18 @@ function CN_SayOutLoud(text) {
 		if (CN_FINISHED) return;
 		CN_IS_READING = true;
 		clearTimeout(CN_TIMEOUT_KEEP_SYNTHESIS_WORKING);
+		CN_TIMEOUT_KEEP_SYNTHESIS_WORKING = setTimeout(CN_KeepSpeechSynthesisActive, 5000);
+	};
+	msg.onend = () => {
+		CN_AfterSpeakOutLoudFinished();
+	}
+	CN_IS_READING = true;
+	window.speechSynthesis.speak(msg);
+}
+
+// Occurs when speaking out loud is finished
+function CN_AfterSpeakOutLoudFinished() {
+	// Make border grey again
+	$("#TTGPTSettings").css("border", "2px solid #888");
+	
+	if (CN_FINISHED) return;
