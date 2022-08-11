@@ -83,3 +83,12 @@ function CN_SayOutLoud(text) {
 	msg.rate = CN_TEXT_TO_SPEECH_RATE;
 	msg.pitch = CN_TEXT_TO_SPEECH_PITCH;
 	msg.onstart = () => {
+		// Make border green
+		$("#TTGPTSettings").css("border-bottom", "8px solid green");
+		
+		// If speech recognition is active, disable it
+		if (CN_IS_LISTENING) CN_SPEECHREC.stop();
+		
+		if (CN_FINISHED) return;
+		CN_IS_READING = true;
+		clearTimeout(CN_TIMEOUT_KEEP_SYNTHESIS_WORKING);
