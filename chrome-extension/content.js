@@ -107,3 +107,12 @@ function CN_AfterSpeakOutLoudFinished() {
 	$("#TTGPTSettings").css("border", "2px solid #888");
 	
 	if (CN_FINISHED) return;
+	
+	// Finished speaking
+	clearTimeout(CN_TIMEOUT_KEEP_SYNTHESIS_WORKING);
+	console.log("Finished speaking out loud");
+	
+	// restart listening
+	CN_IS_READING = false;
+	setTimeout(function() {
+		if (!window.speechSynthesis.speaking) {
