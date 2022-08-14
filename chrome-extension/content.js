@@ -122,3 +122,11 @@ function CN_AfterSpeakOutLoudFinished() {
 		}
 	}, 500);
 }
+
+// This is a workaround for Chrome's bug in the speech synthesis API (https://stackoverflow.com/questions/21947730/chrome-speech-synthesis-with-longer-texts)
+function CN_KeepSpeechSynthesisActive() {
+	console.log("Keeping speech synthesis active...");
+	window.speechSynthesis.pause();
+	window.speechSynthesis.resume();
+	CN_TIMEOUT_KEEP_SYNTHESIS_WORKING = setTimeout(CN_KeepSpeechSynthesisActive, 5000);
+}
