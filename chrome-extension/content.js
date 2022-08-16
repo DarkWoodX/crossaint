@@ -130,3 +130,15 @@ function CN_KeepSpeechSynthesisActive() {
 	window.speechSynthesis.resume();
 	CN_TIMEOUT_KEEP_SYNTHESIS_WORKING = setTimeout(CN_KeepSpeechSynthesisActive, 5000);
 }
+
+// Split the text into sentences so the speech synthesis can start speaking as soon as possible
+function CN_SplitIntoSentences(text) {
+	var sentences = [];
+	var currentSentence = "";
+	
+	for(var i=0; i<text.length; i++) {
+		//
+		var currentChar = text[i];
+		
+		// Add character to current sentence
+		currentSentence += currentChar;
