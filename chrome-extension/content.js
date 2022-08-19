@@ -142,3 +142,13 @@ function CN_SplitIntoSentences(text) {
 		
 		// Add character to current sentence
 		currentSentence += currentChar;
+		
+		// is the current character a delimiter? if so, add current part to array and clear
+		if (
+			// Latin punctuation
+		       currentChar == ',' 
+			|| currentChar == ':' 
+			|| currentChar == '.' 
+			|| currentChar == '!' 
+			|| currentChar == '?' 
+			|| currentChar == ';'
