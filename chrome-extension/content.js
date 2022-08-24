@@ -152,3 +152,15 @@ function CN_SplitIntoSentences(text) {
 			|| currentChar == '!' 
 			|| currentChar == '?' 
 			|| currentChar == ';'
+			|| currentChar == '…'
+			// Chinese/japanese punctuation
+			|| currentChar == '、' 
+			|| currentChar == '，'
+			|| currentChar == '。'
+			|| currentChar == '．'
+			|| currentChar == '！'
+			|| currentChar == '？'
+			|| currentChar == '；'
+			|| currentChar == '：'
+			) {
+			if (currentSentence.trim() != "") sentences.push(currentSentence.trim());
