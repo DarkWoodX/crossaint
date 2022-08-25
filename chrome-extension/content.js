@@ -164,3 +164,16 @@ function CN_SplitIntoSentences(text) {
 			|| currentChar == '：'
 			) {
 			if (currentSentence.trim() != "") sentences.push(currentSentence.trim());
+			currentSentence = "";
+		}
+	}
+	
+	return sentences;
+}
+
+// Check for new messages the bot has sent. If a new message is found, it will be read out loud
+function CN_CheckNewMessages() {
+	// Any new messages?
+	var currentMessageCount = jQuery(".text-base").length;
+	if (currentMessageCount > CN_MESSAGE_COUNT) {
+		// New message!
