@@ -177,3 +177,17 @@ function CN_CheckNewMessages() {
 	var currentMessageCount = jQuery(".text-base").length;
 	if (currentMessageCount > CN_MESSAGE_COUNT) {
 		// New message!
+		CN_MESSAGE_COUNT = currentMessageCount;
+		CN_CURRENT_MESSAGE = jQuery(".text-base:last");
+		CN_CURRENT_MESSAGE_SENTENCES = []; // Reset list of parts already spoken
+		CN_CURRENT_MESSAGE_SENTENCES_NEXT_READ = 0;
+	}
+	
+	// Split current message into parts
+	if (CN_CURRENT_MESSAGE && CN_CURRENT_MESSAGE.length) {
+		var currentText = CN_CURRENT_MESSAGE.text()+"";
+		var newSentences = CN_SplitIntoSentences(currentText);
+		if (newSentences != null && newSentences.length != CN_CURRENT_MESSAGE_SENTENCES.length) {
+			// There is a new part of a sentence!
+			var nextRead = CN_CURRENT_MESSAGE_SENTENCES_NEXT_READ;
+			for (i = nextRead; i < newSentences.length; i++) {
