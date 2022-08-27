@@ -276,3 +276,16 @@ function CN_StartSpeechRecognition() {
 			CN_FINISHED = true;
 			CN_PAUSED = false;
 			CN_SPEECHREC.stop();
+			CN_SayOutLoud("Bye bye");
+			alert("Conversation ended. Click the Start button to resume");
+			
+			// Show start button, hide action buttons
+			jQuery(".CNStartZone").show();
+			jQuery(".CNActionButtons").hide();
+			
+			return;
+		} else if (final_transcript.toLowerCase() == CN_SAY_THIS_WORD_TO_PAUSE) {
+			console.log("You said '"+ CN_SAY_THIS_WORD_TO_PAUSE+"' Conversation paused");
+			CN_PAUSED = true;
+			if (CN_SPEECHREC) CN_SPEECHREC.stop();
+			alert("Conversation paused, the browser is no longer listening. Click OK to resume");
