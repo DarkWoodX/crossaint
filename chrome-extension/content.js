@@ -237,3 +237,12 @@ function CN_SendMessage(text) {
 
 // Start speech recognition using the browser's speech recognition API
 function CN_StartSpeechRecognition() {
+	if (CN_IS_READING) {
+		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+		CN_TIMEOUT_KEEP_SPEECHREC_WORKING = setTimeout(CN_KeepSpeechRecWorking, 100);
+		return;
+	}
+	if (!CN_SPEECH_REC_SUPPORTED) return;
+	CN_SPEECHREC = ('webkitSpeechRecognition' in window) ? new webkitSpeechRecognition() : new SpeechRecognition();
+	CN_SPEECHREC.continuous = true;
+	CN_SPEECHREC.lang = CN_WANTED_LANGUAGE_SPEECH_REC;
