@@ -222,3 +222,18 @@ function CN_SendMessage(text) {
 	// Send the message, if autosend is enabled
 	if (CN_AUTO_SEND_AFTER_SPEAKING) {
 		jQuery("textarea").closest("div").find("button").click();
+		
+		// Stop speech recognition until the answer is received
+		if (CN_SPEECHREC) {
+			clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+			CN_SPEECHREC.stop();
+		}
+	} else {
+		// No autosend, so continue recognizing
+		clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+		CN_TIMEOUT_KEEP_SPEECHREC_WORKING = setTimeout(CN_KeepSpeechRecWorking, 100);
+	}
+}
+
+// Start speech recognition using the browser's speech recognition API
+function CN_StartSpeechRecognition() {
