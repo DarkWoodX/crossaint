@@ -246,3 +246,11 @@ function CN_StartSpeechRecognition() {
 	CN_SPEECHREC = ('webkitSpeechRecognition' in window) ? new webkitSpeechRecognition() : new SpeechRecognition();
 	CN_SPEECHREC.continuous = true;
 	CN_SPEECHREC.lang = CN_WANTED_LANGUAGE_SPEECH_REC;
+	CN_SPEECHREC.onstart = () => {
+		// Make border red
+		$("#TTGPTSettings").css("border-bottom", "8px solid red");
+		
+		CN_IS_LISTENING = true;
+		console.log("I'm listening");
+	};
+	CN_SPEECHREC.onend = () => {
