@@ -201,3 +201,15 @@ function CN_CheckNewMessages() {
 	}
 	
 	setTimeout(CN_CheckNewMessages, 100);
+}
+
+// Send a message to the bot (will simply put text in the textarea and simulate a send button click)
+function CN_SendMessage(text) {
+	// Put message in textarea
+	jQuery("textarea:first").focus();
+	var existingText = jQuery("textarea:first").val();
+	
+	// Is there already existing text?
+	if (!existingText) jQuery("textarea").val(text);
+	else jQuery("textarea").val(existingText+" "+text);
+	
