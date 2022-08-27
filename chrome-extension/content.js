@@ -213,3 +213,12 @@ function CN_SendMessage(text) {
 	if (!existingText) jQuery("textarea").val(text);
 	else jQuery("textarea").val(existingText+" "+text);
 	
+	// Change height in case
+	var fullText = existingText+" "+text;
+	var rows = Math.ceil( fullText.length / 88);
+	var height = rows * 24;
+	jQuery("textarea").css("height", height+"px");
+	
+	// Send the message, if autosend is enabled
+	if (CN_AUTO_SEND_AFTER_SPEAKING) {
+		jQuery("textarea").closest("div").find("button").click();
