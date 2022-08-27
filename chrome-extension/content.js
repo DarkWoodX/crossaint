@@ -262,3 +262,17 @@ function CN_StartSpeechRecognition() {
 	};
 	CN_SPEECHREC.onerror = () => {
 		CN_IS_LISTENING = false;
+		console.log("Error while listening");
+	};
+	CN_SPEECHREC.onresult = (event) => {
+		var final_transcript = "";
+		for (let i = event.resultIndex; i < event.results.length; ++i) {
+			if (event.results[i].isFinal)
+				final_transcript += event.results[i][0].transcript;
+		}
+		console.log("You have said the following words: "+final_transcript);
+		if (final_transcript.toLowerCase() == CN_SAY_THIS_WORD_TO_STOP) {
+			console.log("You said '"+ CN_SAY_THIS_WORD_TO_STOP+"'. Conversation ended");
+			CN_FINISHED = true;
+			CN_PAUSED = false;
+			CN_SPEECHREC.stop();
