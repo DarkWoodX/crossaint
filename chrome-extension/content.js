@@ -254,3 +254,11 @@ function CN_StartSpeechRecognition() {
 		console.log("I'm listening");
 	};
 	CN_SPEECHREC.onend = () => {
+		// Make border grey again
+		$("#TTGPTSettings").css("border", "2px solid #888");
+		
+		CN_IS_LISTENING = false;
+		console.log("I've stopped listening");
+	};
+	CN_SPEECHREC.onerror = () => {
+		CN_IS_LISTENING = false;
