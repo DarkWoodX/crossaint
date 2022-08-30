@@ -289,3 +289,11 @@ function CN_StartSpeechRecognition() {
 			CN_PAUSED = true;
 			if (CN_SPEECHREC) CN_SPEECHREC.stop();
 			alert("Conversation paused, the browser is no longer listening. Click OK to resume");
+			CN_PAUSED = false;
+			console.log("Conversation resumed");
+			return;
+		} else if (final_transcript.toLowerCase().trim() == CN_SAY_THIS_TO_SEND.toLowerCase().trim() && !CN_AUTO_SEND_AFTER_SPEAKING) {
+			console.log("You said '"+ CN_SAY_THIS_TO_SEND+"' - the message will be sent");
+			
+			// Click button
+			jQuery("textarea").closest("div").find("button").click();
