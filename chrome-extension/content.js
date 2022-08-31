@@ -297,3 +297,10 @@ function CN_StartSpeechRecognition() {
 			
 			// Click button
 			jQuery("textarea").closest("div").find("button").click();
+		
+			// Stop speech recognition until the answer is received
+			if (CN_SPEECHREC) {
+				clearTimeout(CN_TIMEOUT_KEEP_SPEECHREC_WORKING);
+				CN_SPEECHREC.stop();
+			}
+			
