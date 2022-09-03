@@ -323,3 +323,10 @@ function CN_KeepSpeechRecWorking() {
 		if (!CN_SPEECHREC)
 			CN_StartSpeechRecognition();
 		else {
+			if (!CN_IS_LISTENING) {
+				try {
+					if (CN_SPEECH_REC_SUPPORTED && !window.speechSynthesis.speaking && !CN_SPEECHREC_DISABLED)
+						CN_SPEECHREC.start();
+				} catch(e) { }
+			}
+		}
