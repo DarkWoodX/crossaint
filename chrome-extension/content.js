@@ -330,3 +330,17 @@ function CN_KeepSpeechRecWorking() {
 				} catch(e) { }
 			}
 		}
+	}
+}
+
+// Toggle button clicks: settings, pause, skip...
+function CN_ToggleButtonClick() {
+	var action = $(this).data("cn");
+	switch(action) {
+	
+		// Open settings menu
+		case "settings":
+			CN_OnSettingsIconClick();
+			return;
+		
+		// The microphone is on. Turn it off
