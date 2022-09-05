@@ -344,3 +344,14 @@ function CN_ToggleButtonClick() {
 			return;
 		
 		// The microphone is on. Turn it off
+		case "micon":
+			// Show other icon and hide this one
+			$(this).css("display", "none");
+			$(".CNToggle[data-cn=micoff]").css("display", "");
+			
+			// Disable speech rec
+			CN_SPEECHREC_DISABLED = true;
+			if (CN_SPEECHREC && CN_IS_LISTENING) CN_SPEECHREC.stop();
+			
+			return;
+		
