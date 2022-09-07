@@ -365,3 +365,14 @@ function CN_ToggleButtonClick() {
 			CN_SPEECHREC_DISABLED = false;
 			if (CN_SPEECHREC && !CN_IS_LISTENING && !CN_IS_READING) CN_SPEECHREC.start();
 			
+			return;
+		
+		// The bot's voice is on. Turn it off
+		case "speakon":
+			// Show other icon and hide this one
+			$(this).css("display", "none");
+			$(".CNToggle[data-cn=speakoff]").css("display", "");
+			CN_SPEAKING_DISABLED = true;
+			
+			// Stop current message (equivalent to 'skip')
+			window.speechSynthesis.pause(); // Pause, and then...
