@@ -376,3 +376,12 @@ function CN_ToggleButtonClick() {
 			
 			// Stop current message (equivalent to 'skip')
 			window.speechSynthesis.pause(); // Pause, and then...
+			window.speechSynthesis.cancel(); // Cancel everything
+			CN_CURRENT_MESSAGE = null; // Remove current message
+			return;
+		
+		// The bot's voice is off. Turn it on
+		case "speakoff":
+			// Show other icon and hide this one
+			$(this).css("display", "none");
+			$(".CNToggle[data-cn=speakon]").css("display", "");
