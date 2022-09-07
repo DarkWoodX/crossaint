@@ -385,3 +385,14 @@ function CN_ToggleButtonClick() {
 			// Show other icon and hide this one
 			$(this).css("display", "none");
 			$(".CNToggle[data-cn=speakon]").css("display", "");
+			CN_SPEAKING_DISABLED = false;
+			
+			return;
+		
+		// Skip current message being read
+		case "skip":
+			window.speechSynthesis.pause(); // Pause, and then...
+			window.speechSynthesis.cancel(); // Cancel everything
+			CN_CURRENT_MESSAGE = null; // Remove current message
+			
+			// Restart listening maybe?
