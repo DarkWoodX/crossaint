@@ -396,3 +396,16 @@ function CN_ToggleButtonClick() {
 			CN_CURRENT_MESSAGE = null; // Remove current message
 			
 			// Restart listening maybe?
+			CN_AfterSpeakOutLoudFinished();
+			return;
+	}
+}
+
+// Start Talk-to-GPT (Start button)
+function CN_StartTTGPT() {
+	CN_SayOutLoud("OK");
+	CN_FINISHED = false;
+	
+	// Hide start button, show action buttons
+	jQuery(".CNStartZone").hide();
+	jQuery(".CNActionButtons").show();
