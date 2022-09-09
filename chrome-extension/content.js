@@ -409,3 +409,14 @@ function CN_StartTTGPT() {
 	// Hide start button, show action buttons
 	jQuery(".CNStartZone").hide();
 	jQuery(".CNActionButtons").show();
+	
+	setTimeout(function() {
+		// Start speech rec
+		CN_StartSpeechRecognition();
+		
+		// Check for new messages
+		CN_CheckNewMessages();
+	}, 1000);
+}
+
+// Perform initialization after jQuery is loaded
