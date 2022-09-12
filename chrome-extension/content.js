@@ -420,3 +420,10 @@ function CN_StartTTGPT() {
 }
 
 // Perform initialization after jQuery is loaded
+function CN_InitScript() {
+	if (typeof $ === null || typeof $ === undefined) $ = jQuery;
+	
+	var warning = "";
+	if ('webkitSpeechRecognition' in window) {
+		console.log("Speech recognition API supported");
+		CN_SPEECH_REC_SUPPORTED = true;
