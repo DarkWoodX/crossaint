@@ -427,3 +427,17 @@ function CN_InitScript() {
 	if ('webkitSpeechRecognition' in window) {
 		console.log("Speech recognition API supported");
 		CN_SPEECH_REC_SUPPORTED = true;
+	} else {
+		console.log("speech recognition API not supported.");
+		CN_SPEECH_REC_SUPPORTED = false;
+		warning = "\n\nWARNING: speech recognition (speech-to-text) is only available in Google Chrome desktop version at the moment. If you are using another browser, you will not be able to dictate text, but you can still listen to the bot's responses.";
+	}
+	
+	// Restore settings
+	CN_RestoreSettings();
+	
+	// Wait on voices to be loaded before fetching list
+	window.speechSynthesis.onvoiceschanged = function () {
+		if (!CN_WANTED_VOICE_NAME){
+			console.log("Reading with default browser voice");
+		} else {
