@@ -451,3 +451,14 @@ function CN_InitScript() {
 			});
 			if (!CN_WANTED_VOICE)
 				console.log("No voice found for '" + CN_WANTED_VOICE_NAME + "', reading with default browser voice");
+		}
+		
+		// Voice OK
+		setTimeout(function() {
+			//CN_SayOutLoud("OK");
+		}, 1000);
+	};
+	
+	// Add icons on the top right corner
+	jQuery("body").append("<span style='position: fixed; top: 8px; right: 16px; display: inline-block; " +
+		"background: #888; color: white; padding: 8px; font-size: 16px; border-radius: 4px; text-align: center;" +
