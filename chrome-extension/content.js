@@ -441,3 +441,13 @@ function CN_InitScript() {
 		if (!CN_WANTED_VOICE_NAME){
 			console.log("Reading with default browser voice");
 		} else {
+			speechSynthesis.getVoices().forEach(function (voice) {
+				//console.log("Found possible voice: " + voice.name + " (" + voice.lang + ")");
+				if (voice.lang + "-" + voice.name == CN_WANTED_VOICE_NAME) {
+					CN_WANTED_VOICE = voice;
+					console.log("I will read using voice " + voice.name + " (" + voice.lang + ")");
+					return false;
+				}
+			});
+			if (!CN_WANTED_VOICE)
+				console.log("No voice found for '" + CN_WANTED_VOICE_NAME + "', reading with default browser voice");
