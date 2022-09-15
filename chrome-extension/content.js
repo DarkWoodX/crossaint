@@ -462,3 +462,13 @@ function CN_InitScript() {
 	// Add icons on the top right corner
 	jQuery("body").append("<span style='position: fixed; top: 8px; right: 16px; display: inline-block; " +
 		"background: #888; color: white; padding: 8px; font-size: 16px; border-radius: 4px; text-align: center;" +
+		"font-weight: bold; z-index: 1111;' id='TTGPTSettings'><a href='https://github.com/C-Nedelcu/talk-to-chatgpt' target=_blank title='Visit project website'>Talk-to-ChatGPT v1.6.1</a><br />" +
+		"<span style='font-size: 16px;' class='CNStartZone'>" +
+		"<button style='border: 1px solid #CCC; padding: 4px; margin: 6px; background: #FFF; border-radius: 4px; color:black;' id='CNStartButton'>▶️ START</button>"+
+		"</span>"+
+		"<span style='font-size: 20px; display:none;' class='CNActionButtons'>" +
+		"<span class='CNToggle' title='Voice recognition enabled. Click to disable' data-cn='micon'>🎙️ </span>  " + // Microphone enabled
+		"<span class='CNToggle' title='Voice recognition disabled. Click to enable' style='display:none;' data-cn='micoff'>🤫 </span>  " + // Microphone disabled
+		"<span class='CNToggle' title='Text-to-speech (bot voice) enabled. Click to disable. This will skip the current message entirely.' data-cn='speakon'>🔊 </span>  " + // Speak out loud
+		"<span class='CNToggle' title='Text-to-speech (bot voice) disabled. Click to enable' style='display:none;' data-cn='speakoff'>🔇 </span>  " + // Mute
+		"<span class='CNToggle' title='Skip the message currently being read by the bot.' data-cn='skip'>⏩ </span>  " + // Skip
