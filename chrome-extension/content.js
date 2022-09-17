@@ -472,3 +472,13 @@ function CN_InitScript() {
 		"<span class='CNToggle' title='Text-to-speech (bot voice) enabled. Click to disable. This will skip the current message entirely.' data-cn='speakon'>🔊 </span>  " + // Speak out loud
 		"<span class='CNToggle' title='Text-to-speech (bot voice) disabled. Click to enable' style='display:none;' data-cn='speakoff'>🔇 </span>  " + // Mute
 		"<span class='CNToggle' title='Skip the message currently being read by the bot.' data-cn='skip'>⏩ </span>  " + // Skip
+		"<span class='CNToggle' title='Open settings menu to change bot voice, language, and other settings' data-cn='settings'>⚙️</span> " + // Settings
+		"</span></span>");
+	
+	setTimeout(function () {
+		// Try and get voices
+		speechSynthesis.getVoices();
+
+		// Make icons clickable
+		jQuery(".CNToggle").css("cursor", "pointer");
+		jQuery(".CNToggle").on("click", CN_ToggleButtonClick);
