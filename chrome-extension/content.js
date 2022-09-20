@@ -482,3 +482,18 @@ function CN_InitScript() {
 		// Make icons clickable
 		jQuery(".CNToggle").css("cursor", "pointer");
 		jQuery(".CNToggle").on("click", CN_ToggleButtonClick);
+		jQuery("#CNStartButton").on("click", CN_StartTTGPT);
+		// Say OK to confirm it has started
+		/*setTimeout(function() {
+		
+		}, 100);*/
+	}, 100);
+}
+
+// Open settings menu
+function CN_OnSettingsIconClick() {
+	console.log("Opening settings menu");
+	
+	// Stop listening
+	CN_PAUSED = true;
+	if (CN_SPEECHREC) CN_SPEECHREC.stop();
