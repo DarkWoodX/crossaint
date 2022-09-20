@@ -507,3 +507,15 @@ function CN_OnSettingsIconClick() {
 	speechSynthesis.getVoices().forEach(function (voice) {
 		var label = `${voice.name} (${voice.lang})`;
 		if (voice.default) label += ' — DEFAULT';
+		var SEL = (CN_WANTED_VOICE && CN_WANTED_VOICE.lang == voice.lang && CN_WANTED_VOICE.name == voice.name) ? "selected=selected": "";
+		voices += "<option value='"+n+"' "+SEL+">"+label+"</option>";
+		n++;
+	});
+	rows += "<tr><td>AI voice and language:</td><td><select id='TTGPTVoice' style='width: 300px; color: black'>"+voices+"</select></td></tr>";
+	
+	// 2. AI talking speed
+	rows += "<tr><td>AI talking speed (speech rate):</td><td><input type=number step='.1' id='TTGPTRate' style='color: black; width: 100px;' value='"+CN_TEXT_TO_SPEECH_RATE+"' /></td></tr>";
+	
+	// 3. AI voice pitch
+	rows += "<tr><td>AI voice pitch:</td><td><input type=number step='.1' id='TTGPTPitch' style='width: 100px; color: black;' value='"+CN_TEXT_TO_SPEECH_PITCH+"' /></td></tr>";
+	
