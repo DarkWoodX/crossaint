@@ -497,3 +497,13 @@ function CN_OnSettingsIconClick() {
 	// Stop listening
 	CN_PAUSED = true;
 	if (CN_SPEECHREC) CN_SPEECHREC.stop();
+	
+	// Prepare settings row
+	var rows = "";
+	  
+	// 1. Bot's voice
+	var voices = "";
+	var n = 0;
+	speechSynthesis.getVoices().forEach(function (voice) {
+		var label = `${voice.name} (${voice.lang})`;
+		if (voice.default) label += ' — DEFAULT';
