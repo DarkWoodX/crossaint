@@ -527,3 +527,11 @@ function CN_OnSettingsIconClick() {
 			if (j == 0) continue;
 			var languageCode = CN_SPEECHREC_LANGS[i][j][0];
 			var SEL = languageCode == CN_WANTED_LANGUAGE_SPEECH_REC ? "selected='selected'": "";
+			languages += "<option value='"+languageCode+"' "+SEL+">"+languageName+" - "+languageCode+"</option>";
+		}
+	}
+	rows += "<tr><td>Speech recognition language:</td><td><select id='TTGPTRecLang' style='width: 300px; color: black;' >"+languages+"</select></td></tr>";
+	
+	// 5. 'Stop' word
+	rows += "<tr><td>'Stop' word:</td><td><input type=text id='TTGPTStopWord' style='width: 100px; color: black;' value='"+CN_SAY_THIS_WORD_TO_STOP+"' /></td></tr>";
+	
