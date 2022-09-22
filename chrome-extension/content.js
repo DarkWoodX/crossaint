@@ -519,3 +519,11 @@ function CN_OnSettingsIconClick() {
 	// 3. AI voice pitch
 	rows += "<tr><td>AI voice pitch:</td><td><input type=number step='.1' id='TTGPTPitch' style='width: 100px; color: black;' value='"+CN_TEXT_TO_SPEECH_PITCH+"' /></td></tr>";
 	
+	// 4. Speech recognition language CN_WANTED_LANGUAGE_SPEECH_REC
+	var languages = "<option value=''></option>";
+	for(var i in CN_SPEECHREC_LANGS) {
+		var languageName = CN_SPEECHREC_LANGS[i][0];
+		for(var j in CN_SPEECHREC_LANGS[i]) {
+			if (j == 0) continue;
+			var languageCode = CN_SPEECHREC_LANGS[i][j][0];
+			var SEL = languageCode == CN_WANTED_LANGUAGE_SPEECH_REC ? "selected='selected'": "";
