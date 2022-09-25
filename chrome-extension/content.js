@@ -544,3 +544,11 @@ function CN_OnSettingsIconClick() {
 	// 8. Manual send word
 	rows += "<tr><td>Manual send word(s):</td><td><input type=text id='TTGPTSendWord' style='width: 300px; color: black;' value='"+CN_SAY_THIS_TO_SEND+"' /> If 'automatic send' is disabled, you can trigger the sending of the message by saying this word (or sequence of words)</td></tr>";
 	
+	// Prepare save/close buttons
+	var closeRow = "<tr><td colspan=2 style='text-align: center'><br /><button id='TTGPTSave' style='font-weight: bold;'>✓ Save</button>&nbsp;<button id='TTGPTCancel' style='margin-left: 20px;'>✗ Cancel</button></td></tr>";
+	
+	// Prepare settings table
+	var table = "<table cellpadding=6 cellspacing=0 style='margin: 30px;'>"+rows+closeRow+"</table>";
+	
+	// A short text at the beginning
+	var desc = "<div style='margin: 8px;'>Please note: some the voices and speech recognition languages do not appear to work. If the one you select doesn't work, try reloading the page. " +
