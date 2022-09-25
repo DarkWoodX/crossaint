@@ -552,3 +552,21 @@ function CN_OnSettingsIconClick() {
 	
 	// A short text at the beginning
 	var desc = "<div style='margin: 8px;'>Please note: some the voices and speech recognition languages do not appear to work. If the one you select doesn't work, try reloading the page. " +
+		"If it still doesn't work after reloading the page, please try selecting another voice or language. " +
+		"Also, sometimes the text-to-speech API takes time to kick in, give it a few seconds to hear the bot speak. <b>Remember this is an experimental extension created just for fun.</b> " +
+		"Check out the <a href='https://github.com/C-Nedelcu/talk-to-chatgpt' target=_blank style='text-decoration: underline'>project page</a> to get the source code." +
+		"</div>";
+	
+	// Open a whole screenful of settings
+	jQuery("body").append("<div style='background: rgba(0,0,0,0.7); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 999999; padding: 20px; color: white; font-size: 14px;' id='TTGPTSettingsArea'><h1>⚙️ Talk-to-GPT settings</h1>"+desc+table+"</div>");
+	
+	// Assign events
+	setTimeout(function() {
+		jQuery("#TTGPTSave").on("click", CN_SaveSettings);
+		jQuery("#TTGPTCancel").on("click", CN_CloseSettingsDialog);
+	}, 100);
+}
+
+// Save settings and close dialog box
+function CN_SaveSettings() {
+	
