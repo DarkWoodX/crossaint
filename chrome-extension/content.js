@@ -570,3 +570,13 @@ function CN_OnSettingsIconClick() {
 // Save settings and close dialog box
 function CN_SaveSettings() {
 	
+	// Save settings
+	try {
+		// AI voice settings: voice/language, rate, pitch
+		var wantedVoiceIndex = jQuery("#TTGPTVoice").val();
+		var allVoices = speechSynthesis.getVoices();
+		CN_WANTED_VOICE = allVoices[wantedVoiceIndex];
+		CN_WANTED_VOICE_NAME = CN_WANTED_VOICE.lang+"-"+CN_WANTED_VOICE.name;
+		CN_TEXT_TO_SPEECH_RATE = Number( jQuery("#TTGPTRate").val() );
+		CN_TEXT_TO_SPEECH_PITCH = Number( jQuery("#TTGPTPitch").val() );
+		
