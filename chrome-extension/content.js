@@ -580,3 +580,25 @@ function CN_SaveSettings() {
 		CN_TEXT_TO_SPEECH_RATE = Number( jQuery("#TTGPTRate").val() );
 		CN_TEXT_TO_SPEECH_PITCH = Number( jQuery("#TTGPTPitch").val() );
 		
+		// Speech recognition settings: language, stop, pause
+		CN_WANTED_LANGUAGE_SPEECH_REC = jQuery("#TTGPTRecLang").val();
+		CN_SAY_THIS_WORD_TO_STOP = jQuery("#TTGPTStopWord").val();
+		CN_SAY_THIS_WORD_TO_PAUSE = jQuery("#TTGPTPauseWord").val();
+		CN_AUTO_SEND_AFTER_SPEAKING = jQuery("#TTGPTAutosend").prop("checked");
+		CN_SAY_THIS_TO_SEND = jQuery("#TTGPTSendWord").val();
+
+		// Apply language to speech recognition instance
+		if (CN_SPEECHREC) CN_SPEECHREC.lang = CN_WANTED_LANGUAGE_SPEECH_REC;
+		
+		// Save settings in cookie
+		var settings = [
+			CN_WANTED_VOICE_NAME,
+			CN_TEXT_TO_SPEECH_RATE,
+			CN_TEXT_TO_SPEECH_PITCH,
+			CN_WANTED_LANGUAGE_SPEECH_REC,
+			CN_SAY_THIS_WORD_TO_STOP,
+			CN_SAY_THIS_WORD_TO_PAUSE,
+			CN_AUTO_SEND_AFTER_SPEAKING?1:0,
+			CN_SAY_THIS_TO_SEND
+		];
+		CN_SetCookie("CN_TTGPT", JSON.stringify(settings));
