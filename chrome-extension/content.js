@@ -602,3 +602,9 @@ function CN_SaveSettings() {
 			CN_SAY_THIS_TO_SEND
 		];
 		CN_SetCookie("CN_TTGPT", JSON.stringify(settings));
+	} catch(e) { alert('Invalid settings values'); return; }
+	
+	// Close dialog
+	console.log("Closing settings dialog");
+	jQuery("#TTGPTSettingsArea").remove();
+	
