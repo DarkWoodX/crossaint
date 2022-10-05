@@ -608,3 +608,11 @@ function CN_SaveSettings() {
 	console.log("Closing settings dialog");
 	jQuery("#TTGPTSettingsArea").remove();
 	
+	// Resume listening
+	CN_PAUSED = false;
+}
+
+// Restore settings from cookie
+function CN_RestoreSettings() {
+	var settingsRaw = CN_GetCookie("CN_TTGPT");
+	try {
