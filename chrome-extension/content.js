@@ -616,3 +616,13 @@ function CN_SaveSettings() {
 function CN_RestoreSettings() {
 	var settingsRaw = CN_GetCookie("CN_TTGPT");
 	try {
+		var settings = JSON.parse(settingsRaw);
+		if (typeof settings == "object" && settings != null) {
+			console.log("Reloading settings from cookie: "+settings);
+			CN_WANTED_VOICE_NAME = settings[0];
+			CN_TEXT_TO_SPEECH_RATE = settings[1];
+			CN_TEXT_TO_SPEECH_PITCH = settings[2];
+			CN_WANTED_LANGUAGE_SPEECH_REC = settings[3];
+			CN_SAY_THIS_WORD_TO_STOP = settings[4];
+			CN_SAY_THIS_WORD_TO_PAUSE = settings[5];
+			if (settings.hasOwnProperty(6)) CN_AUTO_SEND_AFTER_SPEAKING = settings[6] == 1;
