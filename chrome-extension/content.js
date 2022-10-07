@@ -626,3 +626,9 @@ function CN_RestoreSettings() {
 			CN_SAY_THIS_WORD_TO_STOP = settings[4];
 			CN_SAY_THIS_WORD_TO_PAUSE = settings[5];
 			if (settings.hasOwnProperty(6)) CN_AUTO_SEND_AFTER_SPEAKING = settings[6] == 1;
+			if (settings.hasOwnProperty(7)) CN_SAY_THIS_TO_SEND = settings[7];
+		}
+	} catch (ex) {
+		console.error(ex);
+	}
+}
