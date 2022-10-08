@@ -632,3 +632,10 @@ function CN_RestoreSettings() {
 		console.error(ex);
 	}
 }
+
+// Close dialog: remove area altogether
+function CN_CloseSettingsDialog() {
+	console.log("Closing settings dialog");
+	jQuery("#TTGPTSettingsArea").remove();
+	
+	// Resume listening
