@@ -639,3 +639,13 @@ function CN_CloseSettingsDialog() {
 	jQuery("#TTGPTSettingsArea").remove();
 	
 	// Resume listening
+	CN_PAUSED = false;
+}
+
+// Sets a cookie
+function CN_SetCookie(name, value) {
+	var days = 365;
+	var date = new Date();
+	date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+	var expires = "; expires=" + date.toGMTString();
+	document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
