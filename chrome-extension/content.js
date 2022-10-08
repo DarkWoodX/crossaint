@@ -649,3 +649,12 @@ function CN_SetCookie(name, value) {
 	date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 	var expires = "; expires=" + date.toGMTString();
 	document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+}
+
+// Reads a cookie
+function CN_GetCookie(name) {
+	var nameEQ = encodeURIComponent(name) + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) === ' ')
