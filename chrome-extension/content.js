@@ -666,3 +666,12 @@ function CN_GetCookie(name) {
 }
 
 // MAIN ENTRY POINT
+// Load jQuery, then run initialization function
+(function () {
+	
+	setTimeout(function() {
+		typeof jQuery == "undefined" ?
+			alert("[Talk-to-ChatGPT] Sorry, but jQuery was not able to load. The script cannot run. Try using Google Chrome on Windows 11") :
+			CN_InitScript();
+	}, 500);
+	
