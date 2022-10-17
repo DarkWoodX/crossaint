@@ -675,3 +675,14 @@ function CN_GetCookie(name) {
 			CN_InitScript();
 	}, 500);
 	
+})();
+
+// List of languages for speech recognition - Pulled from https://www.google.com/intl/en/chrome/demos/speech.html
+var CN_SPEECHREC_LANGS =
+[['Afrikaans',       ['af-ZA']],
+ ['አማርኛ',           	 ['am-ET']],
+ ['Azərbaycanca',    ['az-AZ']],
+ ['বাংলা',            	 ['bn-BD', 'বাংলাদেশ'],
+                     ['bn-IN', 'ভারত']],
+ ['Bahasa Indonesia',['id-ID']],
+ ['Bahasa Melayu',   ['ms-MY']],
