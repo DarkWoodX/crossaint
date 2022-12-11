@@ -3,4 +3,5 @@
 	"name": "Talk-to-ChatGPT",
 	"version": "1.6.1",
 	"description": "Talk to ChatGPT through your microphone and hear its responses with a voice. Uses speech recognition and text-to-speech technologies",
-	"a
+	"action": {
+		"
