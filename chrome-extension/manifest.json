@@ -11,4 +11,5 @@
 		},
 		"default_title": "Talk-to-ChatGPT V1.6.1"
 	},
-	"content_script
+	"content_scripts":[
+		{
