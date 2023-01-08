@@ -14,4 +14,4 @@
 	"content_scripts":[
 		{
 			"matches":[
-				"https:
+				"https://chat.openai.c
