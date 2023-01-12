@@ -16,4 +16,4 @@
 			"matches":[
 				"https://chat.openai.com/chat*"
 			],
-			"js": ["jquery.m
+			"js": ["jquery.min.js
