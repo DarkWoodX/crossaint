@@ -17,3 +17,6 @@
 				"https://chat.openai.com/chat*"
 			],
 			"js": ["jquery.min.js","content.js"]
+		}
+	],
+	"ic
